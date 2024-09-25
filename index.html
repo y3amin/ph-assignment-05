@@ -26,12 +26,64 @@
           }
         </style>
       </head>
-<body>
-    <h1 class="text-center font-black text-2xl">daisyUI and Font Test</h1>
-
-    <script>
-        console.log('DOM Testing Successful!');
-        
-    </script>    
+<body class="lexend-font">
+        <!-- === HEADER Starts === -->
+        <header class="sticky top-0 z-10 shadow-md">
+            <!-- NAVBAR -->
+            <div class="bg-orange-100/75 backdrop-blur-sm">
+              <div class="navbar max-w-6xl mx-auto py-4">
+                <!-- Link Button -->
+                <div class="navbar-start">
+                  <a onclick="navigateTo('./blog.html');"
+                    ><button
+                      class="btn bg-lime-400 rounded border-none shadow-none px-8"
+                    >
+                      Blog
+                    </button></a
+                  >
+                </div>
+                <!-- Logo -->
+                <div class="navbar-center">
+                  <a
+                    onclick="navigateTo('./index.html');"
+                    class="flex items-center"
+                    href="#"
+                  >
+                    <div><img src="./assets/logo.png" alt="" width="48px" /></div>
+                    <h1 class="text-xl font-bold hidden sm:block ml-4">
+                      Donate Bangladesh
+                    </h1>
+                  </a>
+                </div>
+                <!-- Balance -->
+                <div class="navbar-end">
+                  <div><img src="./assets/coin.png" alt="" /></div>
+                  <div class="ml-2 font-bold">
+                    <h4 id="main-balance">5500 BDT</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Donation and History tab -->
+            <div class="flex justify-center py-4 bg-white/90 backdrop-blur-sm">
+              <!-- Donation Button -->
+              <button
+                id="btn-donation"
+                class="btn bg-transparent rounded border-gray-400 shadow-none px-4 mx-2 text-black"
+              >
+                Donation
+              </button>
+      
+              <!-- History Button -->
+              <button
+                id="btn-history"
+                class="btn bg-transparent rounded border-gray-400 shadow-none px-6 mx-4 text-black"
+              >
+                History
+              </button>
+            </div>
+          </header>
+          <!-- === HEADER Ends === -->
 </body>
 </html>
