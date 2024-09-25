@@ -74,6 +74,15 @@ function processDonation(
 }
 
 // Initialize the function for the first card donation
+
+processDonation(
+  "card-new-input",
+  "card-new-balance",
+  "card-new-btn",
+  "card-new-title",
+  "main-balance",
+  "history-page"
+);
 processDonation(
   "card-01-input",
   "card-01-balance",
