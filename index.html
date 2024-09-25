@@ -1,89 +1,199 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Donate Bangladesh: Home</title>
-        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <script src="https://cdn.tailwindcss.com"></script>
-    
-        <style>
-          .lexend-font {
-            font-family: "Lexend", sans-serif;
-            font-optical-sizing: auto;
-            font-style: normal;
-          }
-        </style>
-      </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate Bangladesh: Home</title>
+  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .lexend-font {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+    }
+  </style>
+</head>
+
 <body class="lexend-font">
-        <!-- === HEADER Starts === -->
-        <header class="sticky top-0 z-10 shadow-md">
-            <!-- NAVBAR -->
-            <div class="bg-orange-100/75 backdrop-blur-sm">
-              <div class="navbar max-w-6xl mx-auto py-4">
-                <!-- Link Button -->
-                <div class="navbar-start">
-                  <a onclick="navigateTo('./blog.html');"
-                    ><button
-                      class="btn bg-lime-400 rounded border-none shadow-none px-8"
-                    >
-                      Blog
-                    </button></a
-                  >
-                </div>
-                <!-- Logo -->
-                <div class="navbar-center">
-                  <a
-                    onclick="navigateTo('./index.html');"
-                    class="flex items-center"
-                    href="#"
-                  >
-                    <div><img src="./assets/logo.png" alt="" width="48px" /></div>
-                    <h1 class="text-xl font-bold hidden sm:block ml-4">
-                      Donate Bangladesh
-                    </h1>
-                  </a>
-                </div>
-                <!-- Balance -->
-                <div class="navbar-end">
-                  <div><img src="./assets/coin.png" alt="" /></div>
-                  <div class="ml-2 font-bold">
-                    <h4 id="main-balance">5500 BDT</h4>
-                  </div>
-                </div>
-              </div>
+  <!-- === HEADER Starts === -->
+  <header class="sticky top-0 z-10 shadow-md">
+    <!-- NAVBAR -->
+    <div class="bg-orange-100/75 backdrop-blur-sm">
+      <div class="navbar max-w-6xl mx-auto py-4">
+        <!-- Link Button -->
+        <div class="navbar-start">
+          <a onclick="navigateTo('./blog.html');"><button class="btn bg-lime-400 rounded border-none shadow-none px-8">
+              Blog
+            </button></a>
+        </div>
+        <!-- Logo -->
+        <div class="navbar-center">
+          <a onclick="navigateTo('./index.html');" class="flex items-center" href="#">
+            <div><img src="./assets/logo.png" alt="" width="48px" /></div>
+            <h1 class="text-xl font-bold hidden sm:block ml-4">
+              Donate Bangladesh
+            </h1>
+          </a>
+        </div>
+        <!-- Balance -->
+        <div class="navbar-end">
+          <div><img src="./assets/coin.png" alt="" /></div>
+          <div class="ml-2 font-bold">
+            <h4 id="main-balance">5500 BDT</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Donation and History tab -->
+    <div class="flex justify-center py-4 bg-white/90 backdrop-blur-sm">
+      <!-- Donation Button -->
+      <button id="btn-donation" class="btn bg-transparent rounded border-gray-400 shadow-none px-4 mx-2 text-black">
+        Donation
+      </button>
+
+      <!-- History Button -->
+      <button id="btn-history" class="btn bg-transparent rounded border-gray-400 shadow-none px-6 mx-4 text-black">
+        History
+      </button>
+    </div>
+  </header>
+  <!-- === HEADER Ends === -->
+
+  <main>
+    <!-- Donation Section -->
+    <section id="donation-page" class="max-w-6xl mx-auto px-2">
+      <!-- CARD 01 -->
+      <div class="my-8 card md:card-side border-2 border-gray-200">
+        <!-- Card Figure -->
+        <figure class="p-4 md:w-1/2">
+          <img class="rounded-xl" src="./assets/noakhali.png" alt="Album" />
+        </figure>
+        <div class="card-body p-4 md:w-1/2">
+          <!-- Card Balance -->
+          <div class="flex justify-center items-center bg-orange-100/30 py-2 rounded max-w-[70%] sm:max-w-[30%]">
+            <div>
+              <img src="./assets/coin.png" alt="" />
             </div>
-      
-            <!-- Donation and History tab -->
-            <div class="flex justify-center py-4 bg-white/90 backdrop-blur-sm">
-              <!-- Donation Button -->
-              <button
-                id="btn-donation"
-                class="btn bg-transparent rounded border-gray-400 shadow-none px-4 mx-2 text-black"
-              >
-                Donation
-              </button>
-      
-              <!-- History Button -->
-              <button
-                id="btn-history"
-                class="btn bg-transparent rounded border-gray-400 shadow-none px-6 mx-4 text-black"
-              >
-                History
-              </button>
+            <div class="ml-2 font-bold">
+              <h4 id="card-01-balance">10104 BDT</h4>
             </div>
-          </header>
-          <!-- === HEADER Ends === -->
+          </div>
+
+          <!-- Card Text Content -->
+
+          <h2 id="card-01-title" class="card-title">
+            Donate for Flood at Noakhali, Bangladesh
+          </h2>
+          <p>
+            The recent flood in Noakhali, Bangladesh, has caused severe devastation, affecting countless
+            families and communities. Your generous donation will provide essential support, including food,
+            clean water, shelter, and medical aid to those affected. Together, we can make a significant
+            difference in helping them recover and rebuild their lives. Every contribution counts and brings
+            hope to those in need during this challenging time. Please consider donating today.
+          </p>
+
+          <!-- Card Actions -->
+          <div class="card-actions flex flex-col items-center space-y-2 mt-4 md:mt-auto">
+            <input id="card-01-input" type="text" placeholder="Write Donation Amount"
+              class="input input-bordered w-full" />
+            <button id="card-01-btn" class="btn bg-lime-400 rounded border-none shadow-none px-8 font-extrabold">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 02 -->
+      <div class="my-8 card md:card-side border-2 border-gray-200">
+        <!-- Card Figure -->
+        <figure class="p-4 md:w-1/2">
+          <img class="rounded-xl" src="./assets/feni.png" alt="Album" />
+        </figure>
+        <div class="card-body p-4 md:w-1/2">
+          <!-- Card Balance -->
+          <div class="flex justify-center items-center bg-orange-100/30 py-2 rounded max-w-[70%] sm:max-w-[30%]">
+            <div>
+              <img src="./assets/coin.png" alt="" />
+            </div>
+            <div class="ml-2 font-bold">
+              <h4 id="card-02-balance">921600 BDT</h4>
+            </div>
+          </div>
+
+          <!-- Card Text Content -->
+
+          <h2 id="card-02-title" class="card-title">
+            Donate for Flood Relief in Feni, Bangladesh
+          </h2>
+          <p>
+            Join us in supporting flood relief efforts in Feni, Bangladesh. Your generous donations will
+            provide essential aid to those affected by the recent floods, ensuring access to food, clean
+            water, and medical assistance. Every contribution, no matter the size, makes a significant
+            impact on the lives of families in need. Together, we can help rebuild and restore hope in this
+            challenging time. Stand with us to bring relief and support to the resilient people of Feni.
+            Donate today and make a difference!
+          </p>
+
+          <!-- Card Actions -->
+          <div class="card-actions flex flex-col items-center space-y-2 mt-4 md:mt-auto">
+            <input id="card-02-input" type="text" placeholder="Write Donation Amount"
+              class="input input-bordered w-full" />
+            <button id="card-02-btn" class="btn bg-lime-400 rounded border-none shadow-none px-8 font-extrabold">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 03 -->
+      <div class="my-8 card md:card-side border-2 border-gray-200">
+        <!-- Card Figure -->
+        <figure class="p-4 md:w-1/2">
+          <img class="rounded-xl" src="./assets/quota-protest.png" alt="Album" />
+        </figure>
+        <div class="card-body p-4 md:w-1/2">
+          <!-- Card Balance -->
+          <div class="flex justify-center items-center bg-orange-100/30 py-2 rounded max-w-[70%] sm:max-w-[30%]">
+            <div>
+              <img src="./assets/coin.png" alt="" />
+            </div>
+            <div class="ml-2 font-bold">
+              <h4 id="card-03-balance">110240 BDT</h4>
+            </div>
+          </div>
+
+          <!-- Card Text Content -->
+
+          <h2 id="card-03-title" class="card-title">
+            Aid for Injured in the Quota Movement
+          </h2>
+          <p>
+            Support the injured from the Quota Movement by contributing to our aid initiative. Your
+            donations will provide crucial medical care, rehabilitation, and support for those affected
+            during the protests. Every contribution, big or small, helps heal wounds and restore hope. Stand
+            in solidarity with the brave individuals fighting for their rights. Join us in making a
+            difference—donate today!
+          </p>
+
+          <!-- Card Actions -->
+          <div class="card-actions flex flex-col items-center space-y-2 mt-4 md:mt-auto">
+            <input id="card-03-input" type="text" placeholder="Write Donation Amount"
+              class="input input-bordered w-full" />
+            <button id="card-03-btn" class="btn bg-lime-400 rounded border-none shadow-none px-8 font-extrabold">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+  </main>
 </body>
+
 </html>
