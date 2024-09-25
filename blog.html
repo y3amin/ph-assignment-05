@@ -76,10 +76,11 @@
                     </div>
                     <div class="collapse-content">
                         <p>
-                            The Document Object Model (DOM) is a way for JavaScript to
-                            interact with HTML documents. It represents the structure of the
-                            page as a tree of elements, allowing you to change content and
-                            style using code.
+                            The Document Object Model (DOM) is a programming interface for web documents. It represents 
+                            the structure of a webpage as a tree of objects, where each element (e.g., paragraphs, headings, images) 
+                            becomes a node in this tree. Using the DOM, we can access, modify, add, or delete elements and content 
+                            within an HTML or XML document. It acts as a bridge between the webpage and programming languages like 
+                            JavaScript, allowing dynamic updates to the content and structure.
                         </p>
                     </div>
                 </div>
@@ -91,11 +92,13 @@
                     </div>
                     <div class="collapse-content">
                         <p>
-                            We can select an element in the DOM using methods like
-                            <code>document.getElementById('id')</code> for a specific ID, or
-                            <code>document.querySelector('.class')</code> for the first
-                            element with a specific class. These methods helps us to find
-                            and work with elements.
+                            We can select DOM elements using JavaScript methods like:
+                            <ul>
+                                <li><code>document.getElementById('id')</code>: Selects an element by its ID.</li>
+                                <li><code>document.querySelector('.class or #id')</code>: Selects the first matching element.</li>
+                                <li><code>document.querySelectorAll('.class or tag')</code>: Selects all matching elements.</li>
+                            </ul>
+                            These methods let us target specific elements to interact with them.
                         </p>
                     </div>
                 </div>
@@ -108,10 +111,11 @@
                     </div>
                     <div class="collapse-content">
                         <p>
-                            Event delegation is when we add a single event listener to a
-                            parent element instead of each child. This is useful because it
-                            reduces the number of listeners needed and makes it easier to
-                            manage events, especially for dynamically added elements.
+                            Event delegation is a technique where a single event listener is added to a parent element to manage 
+                            events for multiple child elements. Instead of adding event listeners to each individual child, we use 
+                            one listener on the parent and handle events as they "bubble up" from the child elements. This approach 
+                            improves performance, reduces memory usage, and is especially useful when working with many elements or 
+                            dynamically generated content.
                         </p>
                     </div>
                 </div>
@@ -124,12 +128,17 @@
                     </div>
                     <div class="collapse-content">
                         <p>
-                            To change an element’s attributes, we use
-                            <code>element.setAttribute('attr', 'value')</code> . For
-                            example, <code>setAttribute('src', 'image.jpg')</code> changes
-                            an image's source. To change styles, we use
-                            <code>element.style.property = 'value'</code> , like
-                            <code>element.style.color = 'red'</code> to change text color.
+                            We can manipulate an element's attributes using JavaScript methods like:
+                            <ul>
+                                <li><code>element.setAttribute('attribute', 'value')</code>: Sets an attribute.</li>
+                                <li><code>element.getAttribute('attribute')</code>: Gets an attribute's value.</li>
+                            </ul>
+                            For styles, we can directly modify the <code>style</code> property:
+                            <ul>
+                                <li><code>element.style.color = 'red'</code>: Changes the text color.</li>
+                                <li><code>element.classList.add('new-class')</code>: Adds a CSS class.</li>
+                            </ul>
+                            These methods help us dynamically change an element’s appearance and behavior.
                         </p>
                     </div>
                 </div>
@@ -138,6 +147,18 @@
         <!-- FAQ Section Starts -->
     </main>
     <script src="./js/urlNavigate.js"></script>
+    
+    <!-- script for special fonts -->
+    <script>
+        const codeElements = document.getElementsByTagName('code');
+
+        for (let i = 0; i < codeElements.length; i++) {
+            codeElements[i].style.backgroundColor = '#333';
+            codeElements[i].style.color = '#fff';
+            codeElements[i].style.padding = '2px 4px';
+            codeElements[i].style.borderRadius = '4px';
+        }
+    </script>
 </body>
 
 </html>
